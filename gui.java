@@ -226,7 +226,7 @@ public class gui extends JFrame {
          }
       });
       path_in.setFont(new Font("Tahoma", 0, 16));
-      path_in.setText("C:\\\\Users\\arist\\\\Desktop\\\\New_Menu\\\\Menu.txt");
+      path_in.setText("Menu.txt");
       path_in.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent evt) {
             gui.this.path_inActionPerformed(evt);
