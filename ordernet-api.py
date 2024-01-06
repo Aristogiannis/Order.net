@@ -16,8 +16,8 @@ def submitorder():
     request_order = request.get_json()
     orders.append(request_order)
     now = datetime.datetime.now()
-    check_txt = open("C:\\Users\\arist\\Desktop\\order_test.txt", "r")
-    check_txt2 = open("C:\\Users\\arist\\Desktop\\order_test.txt", "w")
+    check_txt = open("order_test.txt", "r")
+    check_txt2 = open("order_test.txt", "w")
     ords = str(orders)  
     tst = str(check_txt.read)
     check_txt2.write(tst + now.strftime("%Y-%m-%d %H:%M:%S") + "\n" + ords + now.strftime("%Y-%m-%d %H:%M:%S"))
@@ -38,7 +38,7 @@ def get_by_tablenum(num):
 
 @app.route('/menu', methods = ['GET'])
 def get_menu():
-    menu_txt = open("C:\\Users\\arist\\Desktop\\New_Menu\\Menu.txt", "r")
+    menu_txt = open("Menu.txt", "r")
     menu_fin = menu_txt.read()
     response = str(menu_fin)
     return response
